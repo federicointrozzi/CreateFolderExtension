@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #b3b1b1;
+            width: 380px;
+        }
+        h3 {
+            color: #333;
+        }
+        input[type="text"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 2px solid #212529;
+            border-radius: 4px;
+        }
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            max-height: 200px;
+            overflow-y: auto;
+            border: 2px solid #212529;
+            border-radius: 4px;
+            background-color: #ffffff;
+        }
+        li {
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        li:last-child {
+            border-bottom: none;
+        }
+        button {
+            width: calc(100%);
+            height: 40px;
+            color: #fff;
+            padding: 5px 10px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            display: inline-block;
+            outline: none;
+            border-radius: 5px;
+            z-index: 0;
+            background: #ffdd00;
+            overflow: hidden;
+            border: 2px solid #212529;
+            color: #212529;
+        }
+        button:hover {
+            color: #fff;
+        }
+        button:hover:after {
+            width: 100%;
+        }
+        button:after {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            transition: all 0.3s ease;
+            left: 0;
+            top: 0;
+            width: 0;
+            height: 100%;
+            background: #212529;
+        }
+        ul::-webkit-scrollbar {
+            width: 12px;
+        }
+        ul::-webkit-scrollbar-track {
+            background: #ffffff;
+        }
+        ul::-webkit-scrollbar-thumb {
+            background-color: #888;
+            border-radius: 10px;
+            border: 3px solid #f1f1f1;
+        }
+        ul::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+<h3>Select all the tabs you wanna save:</h3>
+<input type="text" id="folderName" placeholder="Enter folder name" />
+<br />
+<input type="checkbox" id="selectAll" /> Select All
+<ul id="tabList"></ul>
+<button id="saveBtn">Save selected tabs</button>
+<script src="popup.js"></script>
+</body>
+</html>

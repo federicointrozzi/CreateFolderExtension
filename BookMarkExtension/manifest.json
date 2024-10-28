@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Save Tabs in Bookmarks",
+  "version": "1.0",
+  "permissions": ["bookmarks", "tabs"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Select tabs to bookmark",
+    "default_popup_width": 400
+  }
+}
